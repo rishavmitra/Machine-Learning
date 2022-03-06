@@ -1,0 +1,50 @@
+The process of studying(analysing) a variable in detail is called Univariate Analysis
+
+Ouliers are data points distant from rest of the obsevations.
+
+lower_limit = q1 - 1.5*iqr
+upper_limit = q3 + 1.5*iqr
+iqr= Inter-quatile range= q3-q1
+
+Any data point which is higher than upper limit or lower than the lower limit can be termed as an outlier
+
+(Since Matplotlib doesn't have the ability to ignore missing values we use the seaborn library as it can ignore
+missing values)
+# Treating this missing values(Reduces the performance of the model)
+# Deleting the whole row having missing values
+# Imputing the missing values by replacing them with the average values or mean values or mode values.
+    Imputing is not advisable for treating missing values since the model we derive will be from the target variable
+    but imputing the target variable the model will learn from the data we will be deriving rather than the actual
+    data.
+
+                                                    Independent variables
+    Deletion
+    Imputation
+    <-------------For treating missing variables.
+
+
+   Variable Transformation
+   Variable transformation refers to the process of making changes to a variable in a away that it becomes more useful
+   and meaningful for analysis and modelling purposes.
+   1.Outlier Treatment
+   2.When the variable does not represent the information in the best possible way.
+   3.To derive a new variable from an existing variable or combining two variable to transform a variable so that it
+     becomes more useful.
+     eg:The column renovated year can be used to derive two new variables ever renovated and how long ago the renovation
+        was done. This could also impact the target variable sale price
+
+                                                    Corelations
+   How close two variables are to have a linear relationship with each other. IT is a measure or dependence or association between
+   two variables i.e. how does one variable change with change in other.
+
+                                                   Conditional Variable
+   1.What information does the variable contain?
+   2.Do the few sample values that we are able to eyeball(i.e. skim through) make sense?
+   3.How many and what unique values i.e. levels does the categorical variable have and what is the frequency distribution
+   of those unique values?
+   4.How is dependent/target variable correlated with this variable.
+
+                                                   ANOVA
+   Analysis of Variance
+   It checks if the means i.e. average value of the target vaiable across different levels or uniques values of a categorical
+   variable are equal or not.
